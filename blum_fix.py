@@ -29,7 +29,7 @@ def fungsimakanan():
       print("Pilihan tidak ada, silahkan masukan lagi!!")
       fungsimakanan()
 
-    # return print (porsi," porsi Nasi Goreng Telur = Rp", totalmkn) if nomor == 1
+    return print (porsi," porsi Nasi Goreng Telur = Rp", totalmkn) if nomor == 1
 
 def fungsiminuman():
    global totalmnm
