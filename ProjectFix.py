@@ -27,66 +27,66 @@ def filteringIPKKecil():
 #2019/2020
 def filteringThAkademik2019():
     filtering = pd.DataFrame(filter((lambda x : x["tahun_akademik"] == "2019/2020-Ganjil"), data))
-    NilaiIp = filtering
-    return print(NilaiIp)
+    TAkademik = filtering
+    return print(TAkademik)
 def filteringThAkademik2020():
     filtering = pd.DataFrame(filter((lambda x : x["tahun_akademik"] == "2020/2021-Genap"), data))
-    NilaiIp = filtering
-    return print(NilaiIp)
+    TAkademik = filtering
+    return print(TAkademik)
 
 #SGanjil/SGenap
 def filteringSganjil():
     filtering = pd.DataFrame(filter((lambda x : int(x["semester_mahasiswa"]) % 2 == 1), data))
-    NilaiIp = filtering
-    return print(NilaiIp)
+    Semster = filtering
+    return print(Semster)
 def filteringSgenap():
     filtering = pd.DataFrame(filter((lambda x : int(x["semester_mahasiswa"]) % 2 == 0), data))
-    NilaiIp = filtering
-    return print(NilaiIp)
+    Semster = filtering
+    return print(Semster)
 
 #Matkul
 def filteringMTA1():
     filtering = pd.DataFrame(filter((lambda x : x["nama_mk"] == "Tugas Akhir 1 (Proposal)"), data))
-    NilaiIp = filtering
-    return print(NilaiIp)
+    Matkule = filtering
+    return print(Matkule)
 def filteringMTA2():
     filtering = pd.DataFrame(filter((lambda x : x["nama_mk"] == "Tugas Akhir 2 "), data))
-    NilaiIp = filtering
-    return print(NilaiIp)
+    Matkule = filtering
+    return print(Matkule)
 def filteringMPWeb():
     filtering = pd.DataFrame(filter((lambda x : x["nama_mk"] == "Pemrograman Web*"), data))
-    NilaiIp = filtering
-    return print(NilaiIp)
+    Matkule = filtering
+    return print(Matkule)
 def filteringMKP():
     filtering = pd.DataFrame(filter((lambda x : x["nama_mk"] == "Kerja  Praktik  "), data))
-    NilaiIp = filtering
-    return print(NilaiIp)
+    Matkule = filtering
+    return print(Matkule)
 def filteringMPL():
     filtering = pd.DataFrame(filter((lambda x : x["nama_mk"] == "Kriptografi (PL)"), data))
-    NilaiIp = filtering
-    return print(NilaiIp)
+    Matkule = filtering
+    return print(Matkule)
 def filteringMMN():
     filtering = pd.DataFrame(filter((lambda x : x["nama_mk"] == "Metode Numerik*"), data))
-    NilaiIp = filtering
-    return print(NilaiIp)
+    Matkule = filtering
+    return print(Matkule)
 def filteringMPBO():
     filtering = pd.DataFrame(filter((lambda x : x["nama_mk"] == "Pemrograman  Berorientasi Objek*"), data))
-    NilaiIp = filtering
-    return print(NilaiIp)
+    Matkule = filtering
+    return print(Matkule)
 def filteringMSPK():
     filtering = pd.DataFrame(filter((lambda x : x["nama_mk"] == "Sistem Pendukung Keputusan"), data))
-    NilaiIp = filtering
-    return print(NilaiIp)
+    Matkule = filtering
+    return print(Matkule)
 
 #NIM
 def filteringNimGanjil():
     filtering = pd.DataFrame(filter((lambda x : int(x["nim"][10]) % 2 == 1), data))
-    NilaiIp = filtering
-    return print(NilaiIp)
+    nimM = filtering
+    return print(nimM)
 def filteringNimGenap():
     filtering = pd.DataFrame(filter((lambda x : int(x["nim"][10]) % 2 == 0), data))
-    NilaiIp = filtering
-    return print(NilaiIp)
+    nimM = filtering
+    return print(nimM)
 
 #Nama
 def CNamaa():
