@@ -1,5 +1,4 @@
 import pandas as pd, os, csv
-from functools import reduce
 
 with open("dataMhs.csv", "r") as f:
     reader = csv.DictReader(f)
