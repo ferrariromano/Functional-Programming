@@ -144,6 +144,7 @@ def main():
                 frame = pd.DataFrame(data)
                 print(frame)
                 input()
+                menuNama()
             def CNama():
                 clear()
                 CNamaa()
@@ -158,6 +159,7 @@ def main():
     def NIMMahasiswa():
         clear()
         def MenuNIM():
+            clear()
             clear()
             print("======================================")
             print("          Silahkan Pilih NIM          ")
@@ -192,7 +194,7 @@ def main():
         def MenuTahun():
             clear()
             print("======================================")
-            print("       Silahkan Tahum Akademik        ")
+            print("    Silahkan Pilih Tahum Akademik     ")
             print("        [2019-2020/2020-2021]         ")
             print("======================================")
             print("| 1. Tampilkan Seluruh Data          |")
@@ -235,6 +237,8 @@ def main():
             def DataS():
                 frame = pd.DataFrame(data)
                 print(frame)
+                input()
+                MenuSem()
             def SGanjil():
                 filteringSganjil()
                 input()
@@ -267,22 +271,40 @@ def main():
             def SSData():
                 frame = pd.DataFrame(data)
                 print(frame)
+                input()
+                menuMatkul()
             def TA1():
                 filteringMTA1()
+                input()
+                menuMatkul()
             def TA2():
                 filteringMTA2()
+                input()
+                menuMatkul()
             def PWEB():
                 filteringMPWeb()
+                input()
+                menuMatkul()
             def KP():
                 filteringMKP()
+                input()
+                menuMatkul()
             def kripto():
                 filteringMPL()
+                input()
+                menuMatkul()
             def MN():
                 filteringMMN()
+                input()
+                menuMatkul()
             def PBO():
                 filteringMPBO()
+                input()
+                menuMatkul()
             def Spk():
                 filteringMSPK()
+                input()
+                menuMatkul()
             inputM = int(input("Masukan Pilihan :"))
             return SSData() if inputM==1 else TA1() if inputM==2 else TA2() if inputM==3 else PWEB() if inputM==4 else KP() if inputM==5 else kripto() if inputM==6 else MN() if inputM==7 else PBO() if inputM==8 else Spk() if inputM==9 else main() if inputM==0 else print("pilihan tidak ada")
         return menuMatkul()
@@ -296,7 +318,6 @@ def main():
             print("| 1. Tampilkan Seluruh Nilai Data    |")
             print("| 2. Tampilkan Nilai IP Terbesar     |")
             print("| 3. Tampilkan Nilai IP Terkecil     |")
-            print("| 4. Tampilkan Rata-Rata Nilai IP    |")
             print("| 0. Keluar Program                  |")
             print("======================================")
             def SNilaiIP():
@@ -308,6 +329,7 @@ def main():
             def SNilaiTB():
                 clear()
                 def menuNilaiIPIPKB():
+                    clear()
                     print("======================================")
                     print("       Silahkan PIlih [IP/IPK]        ")
                     print("======================================")
@@ -329,6 +351,7 @@ def main():
             def SNilaiTK():
                 clear()
                 def menuNilaiIPIPKK():
+                    clear()
                     print("======================================")
                     print("       Silahkan PIlih [IP/IPK]        ")
                     print("======================================")
@@ -347,10 +370,8 @@ def main():
                     inputPil = int(input("Masukan pilihan :"))
                     return TampilkanIPKecil() if inputPil==1 else TampilkanIPKKecil() if inputPil==2 else menuNilai() if inputPil==0 else print("pilihan tidak ada")
                 return menuNilaiIPIPKK()
-            def RataRataIP():
-                pass
             inputPill = int(input("Masukan Pilihan :"))
-            return SNilaiIP() if inputPill==1 else SNilaiTB() if inputPill==2 else SNilaiTK() if inputPill==3 else RataRataIP() if inputPill==4 else main()
+            return SNilaiIP() if inputPill==1 else SNilaiTB() if inputPill==2 else SNilaiTK() if inputPill==3 else main()
         return menuNilai()
     
     inputPilihan = int(input("Masukan Pilihan :"))
