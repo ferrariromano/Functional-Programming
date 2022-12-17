@@ -88,12 +88,21 @@ def filteringNimGenap():
     NilaiIp = filtering
     return print(NilaiIp)
 
-# filteringNimGenap()
-# filteringMTA2()
+#Nama
+def CNamaa():
+    inputNama = input("Masukan Nama yang dicari :")
+    filtering = pd.DataFrame(filter((lambda x : True if inputNama == x["nama"] else False), data))
+    print(filtering)
+    input()
+def CNamaaNim():
+    inputNama = input("Masukan NIM untuk mencari nama :")
+    filtering = pd.DataFrame(filter((lambda x : True if inputNama == x["nim"] else False), data))
+    print(filtering)
+    input()
 
 def clear():
     os.system("cls")
-
+#Main
 def main():
     clear()
     print()
@@ -115,15 +124,37 @@ def main():
     def SeluruhData():
         frame = pd.DataFrame(data)
         print(frame)
-        print()
         print("Seluruh data telah ditampilkan")
         input()
         main()
     def NamaMahasiswa():
-        def NamaMahasiswa():
-            mapping = pd.DataFrame(map(lambda x : x["nama"], data))
-            return print(mapping)
-        return NamaMahasiswa()
+        clear()
+        def menuNama():
+            clear()
+            print("======================================")
+            print("      Nama Mahasiswa Informatika      ")
+            print("======================================")
+            print("| 1. Tampilkan Seluruh Data          |")
+            print("| 2. Cari Nama                       |")
+            print("| 3. Cari Nama dengan NIM            |")
+            print("| 0. Keluar Program                  |")
+            print("======================================")
+            def SNama():
+                clear()
+                frame = pd.DataFrame(data)
+                print(frame)
+                input()
+            def CNama():
+                clear()
+                CNamaa()
+                menuNama()
+            def CNamaNim():
+                clear()
+                CNamaaNim()
+                menuNama()
+            inputN = int(input("Masukan Pilihan :"))
+            return SNama() if inputN==1 else CNama() if inputN==2 else CNamaNim() if inputN==3 else main() if inputN==0 else print("pilihan tidak ada")
+        return menuNama()
     def NIMMahasiswa():
         clear()
         def MenuNIM():
@@ -321,9 +352,8 @@ def main():
             inputPill = int(input("Masukan Pilihan :"))
             return SNilaiIP() if inputPill==1 else SNilaiTB() if inputPill==2 else SNilaiTK() if inputPill==3 else RataRataIP() if inputPill==4 else main()
         return menuNilai()
-    def dataTidakada():
-        pass
+    
     inputPilihan = int(input("Masukan Pilihan :"))
-    return SeluruhData() if inputPilihan==1 else NamaMahasiswa() if inputPilihan==2 else NIMMahasiswa() if inputPilihan==3 else TahunAMahasiswa() if inputPilihan==4 else SemesterMahasiswa() if inputPilihan==5 else Matkul() if inputPilihan==6 else NilaiIPMahasiswa() if inputPilihan==7 else dataTidakada()
+    return SeluruhData() if inputPilihan==1 else NamaMahasiswa() if inputPilihan==2 else NIMMahasiswa() if inputPilihan==3 else TahunAMahasiswa() if inputPilihan==4 else SemesterMahasiswa() if inputPilihan==5 else Matkul() if inputPilihan==6 else NilaiIPMahasiswa() if inputPilihan==7 else exit() if inputPilihan==0 else print("pilihan tidak ada")
 
 main()
